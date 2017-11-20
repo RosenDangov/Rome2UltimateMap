@@ -10,8 +10,9 @@
 	        }
 
 	        .container {
-	            width: 1074px;
-	            height: 880px;
+	            width: 1574;
+	            height: 1380;
+	            border: 200px;
 	            position: absolute;
 	            left: 8px;
 	            top: 8px;
@@ -20,7 +21,7 @@
 	            position: absolute;
 	            background-color: #fff;
 	            moz-opacity: 0.70;
-	            /*opacity: 0.70;*/
+	            opacity: 0.7;
 	            filter: alpha(opacity=70);
 	            border-radius: 10px;
 	            padding: 10px;
@@ -34,7 +35,7 @@
 
      	    @keyframes fadein {
 		        0% {opacity: 0;}
-			    100% {opacity: 1;}
+			    100% {opacity: 0.7;}
 		    }
 	    </style>
 
@@ -67,15 +68,46 @@
                       	    }
                   	    },
 	                },areas: {
-	                    "wales": {
-	                        value: "wales",
+	                    "moridunon-resource-gold": {
+	                        value: "moridunon-resource-gold",
 	                        href: "#",
-	                        tooltip: {content: "<span style=\"font-weight:bold;\">Moridunon (Britannia)</span><br/><img src=\"img/gold.png\"> <span style=\"font-weight:bold;\">Gold</span><br/>0/-1/-4/-8 food <br/>200/350/500/700 mining wealth<br>5%/10%/15%/20% mining wealth(global)<br> 1/2/3/4/ growth<br>0/0/0/5% commerce wealth"},
+	                        tooltip: {content: "<span style=\"font-weight:bold;\">Moridunon (Britannia)</span><br/><img src=\"img/gold.png\"> <span style=\"font-weight:bold;\">Gold</span><br/>0/-1/-4/-8 food <br/>200/350/500/700 mining wealth<br>+5%/10%/15%/20% mining wealth(global)<br> 1/2/3/4/ growth<br>0/0/0/5% commerce wealth"},
+	                    },
+	                    "nemossos-resource-gold": {
+	                        value: "nemossos-resource-gold",
+	                        href: "#",
+	                        tooltip: {content: "<span style=\"font-weight:bold;\">Nemossos (Aquitania)</span><br/><img src=\"img/gold.png\"> <span style=\"font-weight:bold;\">Gold</span><br/>0/-1/-4/-8 food <br/>200/350/500/700 mining wealth<br>+5%/10%/15%/20% mining wealth(global)<br> 1/2/3/4/ growth<br>0/0/0/5% commerce wealth"},
+	                    },
+	                    "istros-resource-gold": {
+	                        value: "istros-resource-gold",
+	                        href: "#",
+	                        tooltip: {content: "<span style=\"font-weight:bold;\">Istros (Hercynia)</span><br/><img src=\"img/gold.png\"> <span style=\"font-weight:bold;\">Gold</span><br/>0/-1/-4/-8 food <br/>200/350/500/700 mining wealth<br>+5%/10%/15%/20% mining wealth(global)<br> 1/2/3/4/ growth<br>0/0/0/5% commerce wealth"},
+	                    },
+	                    "aksum-resource-gold": {
+	                        value: "aksum-resource-gold",
+	                        href: "#",
+	                        tooltip: {content: "<span style=\"font-weight:bold;\">Aksum (Aethiopia)</span><br/><img src=\"img/gold.png\"> <span style=\"font-weight:bold;\">Gold</span><br/>0/-1/-4/-8 food <br/>200/350/500/700 mining wealth<br>+5%/10%/15%/20% mining wealth(global)<br> 1/2/3/4/ growth<br>0/0/0/5% commerce wealth"},
+	                    },
+	                    "gabala-resource-gold": {
+	                        value: "gabala-resource-gold",
+	                        href: "#",
+	                        tooltip: {content: "<span style=\"font-weight:bold;\">Gabala (Caucasia)</span><br/><img src=\"img/gold.png\"> <span style=\"font-weight:bold;\">Gold</span><br/>0/-1/-4/-8 food <br/>200/350/500/700 mining wealth<br>+5%/10%/15%/20% mining wealth(global)<br> 1/2/3/4/ growth<br>0/0/0/5% commerce wealth"},
+	                    },
+	                    "eucratideia-resource-gold": {
+	                        value: "eucratideia-resource-gold",
+	                        href: "#",
+	                        tooltip: {content: "<span style=\"font-weight:bold;\">Eucratideia (Bactria)</span><br/><img src=\"img/gold.png\"> <span style=\"font-weight:bold;\">Gold</span><br/>0/-1/-4/-8 food <br/>200/350/500/700 mining wealth<br>+5%/10%/15%/20% mining wealth(global)<br> 1/2/3/4/ growth<br>0/0/0/5% commerce wealth"},
 	                    },
 	                    "bam-resource-marble":{
+	                    	value: "bam",
 	                    	href: "#",
-	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Moridunon (Britannia)</span><br/><img src=\"img/gold.png\"> <span style=\"font-weight:bold;\">Gold</span><br/>0/-1/-4/-8 food <br/>200/350/500/700 mining wealth<br>5%/10%/15%/20% mining wealth(global)<br> 1/2/3/4/ growth<br>0/0/0/5% commerce wealth"},
-	                    } ,
+	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Bam (Carmania)</span><br/><img src=\"img/marble.png\"> <span style=\"font-weight:bold;\">Marble</span><br/>0/-1/-4/-8 food <br/>100/150/200/300 mining wealth<br>10%/20%/30%/40% cheaper construction<br>+0/2/4/6 public order(global)<br> 1/2/3/4/ growth<br>0/0/0/5% commerce wealth"},
+	                    },
+	                    "yathrib-resource-marble":{
+	                    	value: "bam",
+	                    	href: "#",
+	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Yathrib (Arabia Magna)</span><br/><img src=\"img/marble.png\"> <span style=\"font-weight:bold;\">Marble</span><br/>0/-1/-4/-8 food <br/>100/150/200/300 mining wealth<br>10%/20%/30%/40% cheaper construction<br>+0/2/4/6 public order(global)<br> 1/2/3/4/ growth<br>0/0/0/5% commerce wealth"},
+	                    },
 	                },
 	            });
 	        });
