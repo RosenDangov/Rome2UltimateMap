@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Raphaël JS Map</title>
+		<style type="text/css">
+			.united-kingdom {
+				background-image: url(img/rome2grand.png);
+				background-repeat: no-repeat;
+			}
+
+			.heaven-on-earth {
+				fill: yellow;
+			}
+		</style>
+	    <link rel="stylesheet" type="text/css" href="tooltipster.bundle.min.css" />
+
+	    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+    	<script type="text/javascript" src="tooltipster.bundle.min.js"></script>
+
+	    <script>
+        $(document).ready(function() {
+            $('.tooltip').tooltipster({
+        	    animation: 'fade',
+				delay: 200,
+			    theme: 'tooltipster-punk',
+            });
+        });
+    </script>
+	</head>
+	<body>
+		<div id="map" class="united-kingdom">
+			<!-- Raphaël JS Map Here -->
+		</div>
+		<span class="tooltip" title="This is my span's tooltip message!">Some text</span>
+		<h3 id="region-name"></h3>
+		<script src="raphael-min.js"></script>
+		<script src="map.js"></script>
+	</body>
+</html>

@@ -1,25 +1,86 @@
 <!DOCTYPE html>
 <html>
 	<head>
+
+	    <style type="text/css">
+	        body {
+	            color: #5d5d5d;
+	            font-family: Helvetica, Arial, sans-serif;
+
+	        }
+
+	        .container {
+	            width: 1074px;
+	            height: 880px;
+	            position: absolute;
+	            left: 8px;
+	            top: 8px;
+	        }
+            .mapael .mapTooltip {
+	            position: absolute;
+	            background-color: #fff;
+	            moz-opacity: 0.70;
+	            opacity: 0.70;
+	            filter: alpha(opacity=70);
+	            border-radius: 10px;
+	            padding: 10px;
+	            z-index: 1000;
+	            max-width: 200px;
+	            display: none;
+	            color: #343434;
+     	   }
+	    </style>
+
+
+
 		<meta charset="UTF-8">
 		<title>Raphaël JS Map</title>
-		<style type="text/css">
-			.united-kingdom {
-				background-image: url(img/rome2grand.png);
-				background-repeat: no-repeat;
-			}
+		<script src="jquery-3.2.1.min.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"
+        charset="utf-8"></script>
 
-			.heaven-on-earth {
-				fill: yellow;
-			}
-		</style>
+		<script src="raphael-min.js"></script>
+		<script src="jquery.mapael.min.js"></script>
+		<script src="resources.js"></script>
+		  <script type="text/javascript">
+	        $(function () {
+	            $(".mapcontainer").mapael({
+	                map: {
+	                    // Set the name of the map to display
+	                    name: "resources",
+	                    defaultArea: {
+	                        attrs: {
+	                            fill: "#FF00FF",
+	                            stroke: "#ced8d0",
+	                            opacity: 0.1,
+	                        },
+	                        attrsHover: {
+	                            fill: "#00FF00",
+	                            opacity: 0.9,
+                      	    }
+                  	    },
+	                },areas: {
+	                    "wales": {
+	                        value: "wales",
+	                        href: "#",
+	                        tooltip: {content: "<span style=\"font-weight:bold;\">Nord (59)</span><br />Population : 2617939"}
+	                    },
+	                }
+	            });
+	        });
+
+
+    	</script>
 	</head>
 	<body>
-		<div id="map" class="united-kingdom">
-			<!-- Raphaël JS Map Here -->
+		<img src="img/rome2grand.png" >
+		<div id="map" class="container">
+			<div class="mapcontainer">
+				<div class="map">
+
+				</div>
+			</div>
 		</div>
-		<h3 id="region-name"></h3>
-		<script src="raphael-min.js"></script>
-		<script src="map.js"></script>
+
 	</body>
 </html>
