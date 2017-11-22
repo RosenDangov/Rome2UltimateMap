@@ -69,6 +69,31 @@
 	                            opacity: 0.7,
                       	    }
                   	    },
+	                }, legend:{
+	                	plot:{
+		                	title:"Wonders",
+		                	slices: [{
+		                		label:"Wonders",
+		                		sliceValue:"Wonders",
+		                		type: "image",
+		                		url: "img/wonder.png",
+		                		width:14,
+		                		height:14,
+		                	}]
+		                }
+	                }, plots:{
+	                	'stonehenge':{
+	                		x:141,
+	                		y:197,
+	                		tooltip:{content:"Stonehenge"},
+	                		value: "Wonders"
+	                	},
+	                	'karnag':{
+	                		x:115,
+	                		y:275,
+	                		tooltip:{content:"The Dolmens of Karnag"},
+	                		value: "Wonders"
+	                	}
 	                },areas: {
 	                    "moridunon-resource-gold": {
 	                        value: "moridunon-resource-gold",
