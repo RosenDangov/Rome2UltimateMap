@@ -4,7 +4,6 @@
 		<meta charset="utf-8">
 	    <style type="text/css">
 	        body {
-	            color: #5d5d5d;
 	            font-family: Helvetica, Arial, sans-serif;
 
 	        }
@@ -23,6 +22,9 @@
 	        	padding-left: 300px;
 	        	transform: scale(3,3);
 	        }*/
+	        .redResources{
+
+	        }
             .mapael .mapTooltip {
 	            position: absolute;
 	            background-color: #fff;
@@ -35,7 +37,6 @@
 	            max-width: 2000px;
 	            max-height: 2000px;
 	            display: none;
-	            color: #343434;
 	            animation: fadein 0.3s linear;
      	    }
 
@@ -67,32 +68,34 @@
 	                        attrs: {
 	                            fill: "#000000",
 	                            stroke: "#ced8d0",
-	                            opacity: 0.3,
+	                            opacity: 0.5,
 	                        },
 	                        attrsHover: {
-	                            fill: "#3500A8",
-	                            opacity: 0.7,
+	                            opacity: 1,
                       	    }
                   	    },
 	                }, legend:{
 	                	redrawOnResize: true,
-		                area:{
-		                	hideElemsOnClick:{
-		                		opacity:0,
-		                		animDuration:250,
+		                area:[{
+			                	hideElemsOnClick:{
+			                		opacity:0,
+			                		animDuration:250,
+			                	},
+			                	slices:[{
+			                		label:"Resources",
+			                		sliceValue:"Resources",
+			                		type: "image",
+			                		url: "img/gold.png",
+			                		width:50,
+			                		height:50,
+			                		attrsHover:{
+			                			transform: "s1.25"
+			                		},
+			                	}],
+		                	}, {
+
 		                	},
-		                	slices:[{
-		                		label:"Resources",
-		                		sliceValue:"Resources",
-		                		type: "image",
-		                		url: "img/gold.png",
-		                		width:50,
-		                		height:50,
-		                		attrsHover:{
-		                			transform: "s1.25"
-		                		},
-		                	}],
-		                },
+		                ],
 	                	plot:{
 	                		title:"Wonders",
 	                		hideElemsOnClick:{
@@ -232,342 +235,750 @@
 	                	},
 
 	                },areas: {
-	                    "moridunon-resource-gold": {
+	                    "moridunon-resource-gold":{
+							attrs:{
+								fill:"#493D31"
+							},
+							attrsHover:{
+								fill:"#493D31",
+							},
 	                        value: "Resources",
 	                        href: "#",
 	                        tooltip: {content: "<span style=\"font-weight:bold;\">Moridunon (Britannia)</span><br/><img src=\"img/gold.png\"> <span style=\"font-weight:bold;\">Gold</span><br/>0/-1/-4/-8 food <br/>200/350/500/700 mining wealth<br>+5%/10%/15%/20% mining wealth(global)<br>1/2/3/4 growth<br>0/0/0/5% commerce wealth(global)"},
 	                    },
-	                    "nemossos-resource-gold": {
+	                    "nemossos-resource-gold":{
+							attrs:{
+								fill:"#493D31"
+							},
+							attrsHover:{
+								fill:"#493D31",
+							},
 	                        value: "Resources",
 	                        href: "#",
 	                        tooltip: {content: "<span style=\"font-weight:bold;\">Nemossos (Aquitania)</span><br/><img src=\"img/gold.png\"> <span style=\"font-weight:bold;\">Gold</span><br/>0/-1/-4/-8 food <br/>200/350/500/700 mining wealth<br>+5%/10%/15%/20% mining wealth(global)<br>1/2/3/4 growth<br>0/0/0/5% commerce wealth(global)"},
 	                    },
-	                    "istros-resource-gold": {
+	                    "istros-resource-gold":{
+							attrs:{
+								fill:"#493D31"
+							},
+							attrsHover:{
+								fill:"#493D31",
+							},
 	                        value: "Resources",
 	                        href: "#",
 	                        tooltip: {content: "<span style=\"font-weight:bold;\">Istros (Hercynia)</span><br/><img src=\"img/gold.png\"> <span style=\"font-weight:bold;\">Gold</span><br/>0/-1/-4/-8 food <br/>200/350/500/700 mining wealth<br>+5%/10%/15%/20% mining wealth(global)<br>1/2/3/4 growth<br>0/0/0/5% commerce wealth(global)"},
 	                    },
-	                    "aksum-resource-gold": {
+	                    "aksum-resource-gold":{
+							attrs:{
+								fill:"#493D31"
+							},
+							attrsHover:{
+								fill:"#493D31",
+							},
 	                        value: "Resources",
 	                        href: "#",
 	                        tooltip: {content: "<span style=\"font-weight:bold;\">Aksum (Aethiopia)</span><br/><img src=\"img/gold.png\"> <span style=\"font-weight:bold;\">Gold</span><br/>0/-1/-4/-8 food <br/>200/350/500/700 mining wealth<br>+5%/10%/15%/20% mining wealth(global)<br>1/2/3/4 growth<br>0/0/0/5% commerce wealth(global)"},
 	                    },
-	                    "gabala-resource-gold": {
+	                    "gabala-resource-gold":{
+							attrs:{
+								fill:"#493D31"
+							},
+							attrsHover:{
+								fill:"#493D31",
+							},
 	                        value: "Resources",
 	                        href: "#",
 	                        tooltip: {content: "<span style=\"font-weight:bold;\">Gabala (Caucasia)</span><br/><img src=\"img/gold.png\"> <span style=\"font-weight:bold;\">Gold</span><br/>0/-1/-4/-8 food <br/>200/350/500/700 mining wealth<br>+5%/10%/15%/20% mining wealth(global)<br>1/2/3/4 growth<br>0/0/0/5% commerce wealth(global)"},
 	                    },
-	                    "eucratideia-resource-gold": {
+	                    "eucratideia-resource-gold":{
+							attrs:{
+								fill:"#493D31"
+							},
+							attrsHover:{
+								fill:"#493D31",
+							},
 	                        value: "Resources",
 	                        href: "#",
 	                        tooltip: {content: "<span style=\"font-weight:bold;\">Eucratideia (Bactria)</span><br/><img src=\"img/gold.png\"> <span style=\"font-weight:bold;\">Gold</span><br/>0/-1/-4/-8 food <br/>200/350/500/700 mining wealth<br>+5%/10%/15%/20% mining wealth(global)<br>1/2/3/4 growth<br>0/0/0/5% commerce wealth(global)"},
 	                    },
 	                    "bam-resource-marble":{
+							attrs:{
+								fill:"#493D31"
+							},
+							attrsHover:{
+								fill:"#493D31",
+							},
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Bam (Carmania)</span><br/><img src=\"img/marble.png\"> <span style=\"font-weight:bold;\">Marble</span><br/>0/-1/-4/-8 food <br/>100/150/200/300 mining wealth<br>5%/10%/15%/20% cheaper construction<br>1/2/3/4 public order(global)<br>1/2/3/4 growth"},
 	                    },
 	                    "iader-resource-marble":{
+							attrs:{
+								fill:"#493D31"
+							},
+							attrsHover:{
+								fill:"#493D31",
+							},
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Iader (Illyria)</span><br/><img src=\"img/marble.png\"> <span style=\"font-weight:bold;\">Marble</span><br/>0/-1/-4/-8 food <br/>100/150/200/300 mining wealth<br>10%/20%/30%/40% cheaper construction<br>+0/2/4/6 public order(global)<br>1/2/3/4 growth"},
 	                    },
 	                    "sparta-resource-marble":{
+							attrs:{
+								fill:"#493D31"
+							},
+							attrsHover:{
+								fill:"#493D31",
+							},
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Sparta (Hellas)</span><br/><img src=\"img/marble.png\"> <span style=\"font-weight:bold;\">Marble</span><br/>0/-1/-4/-8 food <br/>100/150/200/300 mining wealth<br>10%/20%/30%/40% cheaper construction<br>+0/2/4/6 public order(global)<br>1/2/3/4 growth"},
 	                    },
 	                    "pergamon-resource-marble":{
+							attrs:{
+								fill:"#493D31"
+							},
+							attrsHover:{
+								fill:"#493D31",
+							},
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">	Pergamon (Asia)</span><br/><img src=\"img/marble.png\"> <span style=\"font-weight:bold;\">Marble</span><br/>0/-1/-4/-8 food <br/>100/150/200/300 mining wealth<br>10%/20%/30%/40% cheaper construction<br>+0/2/4/6 public order(global)<br>1/2/3/4 growth"},
 	                    },
 	                    "aracillum-resource-marble":{
+							attrs:{
+								fill:"#493D31"
+							},
+							attrsHover:{
+								fill:"#493D31",
+							},
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">	Aracillum (Tarraconensis)</span><br/><img src=\"img/marble.png\"> <span style=\"font-weight:bold;\">Marble</span><br/>0/-1/-4/-8 food <br/>100/150/200/300 mining wealth<br>10%/20%/30%/40% cheaper construction<br>+0/2/4/6 public order(global)<br>1/2/3/4 growth"},
 	                    },
 	                    "yathrib-resource-marble":{
+							attrs:{
+								fill:"#493D31"
+							},
+							attrsHover:{
+								fill:"#493D31",
+							},
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Yathrib (Arabia Magna)</span><br/><img src=\"img/marble.png\"> <span style=\"font-weight:bold;\">Marble</span><br/>0/-1/-4/-8 food <br/>100/150/200/300 mining wealth<br>10%/20%/30%/40% cheaper construction<br>+0/2/4/6 public order(global)<br>1/2/3/4 growth"},
 	                    },
 	                    "edessa-resource-silk":{
+                            attrs:{
+                                fill:"#7256AB"
+                            },
+                            attrsHover:{
+                                fill:"#7256AB"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Edessa (Mesopotamia)</span><br/><img src=\"img/silk.png\"> <span style=\"font-weight:bold;\">Silk</span><br/>0/-1/-4/-8 food <br/>100/150/200/250 local commerce<br>5%/10%/15%/20% commerce wealth(global)<br>0/1/2/3 public order<br>1/2/3/3 growth"},
 	                    },
 	                    "susia-resource-silk":{
+                            attrs:{
+                                fill:"#7256AB"
+                            },
+                            attrsHover:{
+                                fill:"#7256AB"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Susia (Parthia)</span><br/><img src=\"img/silk.png\"> <span style=\"font-weight:bold;\">Silk</span><br/>0/-1/-4/-8 food <br/>100/150/200/250 local commerce<br>5%/10%/15%/20% commerce wealth(global)<br>0/1/2/3 public order<br>1/2/3/3 growth"},
 	                    },
 	                    "bukhara-resource-silk":{
+                            attrs:{
+                                fill:"#7256AB"
+                            },
+                            attrsHover:{
+                                fill:"#7256AB"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Bukhara (Transoxania)</span><br/><img src=\"img/silk.png\"> <span style=\"font-weight:bold;\">Silk</span><br/>0/-1/-4/-8 food <br/>100/150/200/250 local commerce<br>5%/10%/15%/20% commerce wealth(global)<br>0/1/2/3 public order<br>1/2/3/3 growth"},
 	                    },
 	                    "eborakon-resource-leather":{
-	                    	value: "Resources",
+							attrs:{
+								fill:"#493D31"
+							},
+							attrsHover:{
+								fill:"#493D31",
+							},
+							value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Eborakon (Britannia)</span><br/><img src=\"img/leather.png\"> <span style=\"font-weight:bold;\">Leather</span><br/>0/-1/-4/-8 food <br/>100/150/200/250 local commerce<br>5%/10%/15%/20% manufacturing wealth(global)<br>1/2/3/4 growth"},
 	                    },
 	                    "uburzis-resource-leather":{
-	                    	value: "Resources",
+							attrs:{
+								fill:"#493D31"
+							},
+							attrsHover:{
+								fill:"#493D31",
+							},
+							value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Uburzis (Magna Germania)</span><br/><img src=\"img/leather.png\"> <span style=\"font-weight:bold;\">Leather</span><br/>0/-1/-4/-8 food <br/>100/150/200/250 local commerce<br>5%/10%/15%/20% manufacturing wealth(global)<br>1/2/3/4 growth"},
 	                    },
 	                    "galic-resource-leather":{
-	                    	value: "Resources",
+							attrs:{
+								fill:"#493D31"
+							},
+							attrsHover:{
+								fill:"#493D31",
+							},
+							value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Galic (Sarmatia)</span><br/><img src=\"img/leather.png\"> <span style=\"font-weight:bold;\">Leather</span><br/>0/-1/-4/-8 food <br/>100/150/200/250 local commerce<br>5%/10%/15%/20% manufacturing wealth(global)<br>1/2/3/4 growth"},
 	                    },
 	                    "gelonus-resource-leather":{
-	                    	value: "Resources",
+							attrs:{
+								fill:"#493D31"
+							},
+							attrsHover:{
+								fill:"#493D31",
+							},
+							value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Gelonus (Scythia)</span><br/><img src=\"img/leather.png\"> <span style=\"font-weight:bold;\">Leather</span><br/>0/-1/-4/-8 food <br/>100/150/200/250 local commerce<br>5%/10%/15%/20% manufacturing wealth(global)<br>1/2/3/4 growth"},
 	                    },
 	                    "namnetum-resource-timber":{
+							attrs:{
+								fill:"#493D31"
+							},
+							attrsHover:{
+								fill:"#493D31",
+							},
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Namnetum (Celtica)</span><br/><img src=\"img/timber.png\"> <span style=\"font-weight:bold;\">Timber</span><br/>0/-1/-4/-8 food <br/>40/60/80/100 manufacturing wealth<br>5%/10%/15%/20% industry wealth<br>1/2/3/4 growth<br>0/1/2/3 public order<br>0/1/2/3 level hulls"},
 	                    },
 	                    "iol-resource-timber":{
+							attrs:{
+								fill:"#493D31"
+							},
+							attrsHover:{
+								fill:"#493D31",
+							},
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Iol (Mauretania)</span><br/><img src=\"img/timber.png\"> <span style=\"font-weight:bold;\">Timber</span><br/>0/-1/-4/-8 food <br/>40/60/80/100 manufacturing wealth<br>5%/10%/15%/20% industry wealth<br>1/2/3/4 growth<br>0/1/2/3 public order<br>0/1/2/3 level hulls"},
 	                    },
 	                    "rhougion-resource-timber":{
+							attrs:{
+								fill:"#493D31"
+							},
+							attrsHover:{
+								fill:"#493D31",
+							},
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Rhougion (Suebia)</span><br/><img src=\"img/timber.png\"> <span style=\"font-weight:bold;\">Timber</span><br/>0/-1/-4/-8 food <br/>40/60/80/100 manufacturing wealth<br>5%/10%/15%/20% industry wealth<br>1/2/3/4 growth<br>0/1/2/3 public order<br>0/1/2/3 level hulls"},
 	                    },
 	                    "sinope-resource-timber":{
+							attrs:{
+								fill:"#493D31"
+							},
+							attrsHover:{
+								fill:"#493D31",
+							},
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Sinope (Bithynia et Pontus)</span><br/><img src=\"img/timber.png\"> <span style=\"font-weight:bold;\">Timber</span><br/>0/-1/-4/-8 food <br/>40/60/80/100 manufacturing wealth<br>5%/10%/15%/20% industry wealth<br>1/2/3/4 growth<br>0/1/2/3 public order<br>0/1/2/3 level hulls"},
 	                    },
 	                    "kapisene-resource-timber":{
+							attrs:{
+								fill:"#493D31"
+							},
+							attrsHover:{
+								fill:"#493D31",
+							},
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Kapisene (Arachosia)</span><br/><img src=\"img/timber.png\"> <span style=\"font-weight:bold;\">Timber</span><br/>0/-1/-4/-8 food <br/>40/60/80/100 manufacturing wealth<br>5%/10%/15%/20% industry wealth<br>1/2/3/4 growth<br>0/1/2/3 public order<br>0/1/2/3 level hulls"},
 	                    },
 	                    "tolosa-resource-oliveoil":{
+							attrs:{
+								fill:"#493D31"
+							},
+							attrsHover:{
+								fill:"#493D31",
+							},
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Tolosa (Provincia)</span><br/><img src=\"img/oliveoil.png\"> <span style=\"font-weight:bold;\">Olive oil</span><br/>1/2/4/8 food <br/>100/150/200/300 farming wealth<br>5%/10%/15%/20% agriculture wealth(global)<br>1/2/3/4 growth<br>0/1/2/3 public order"},
 	                    },
 	                    "arse-resource-oliveoil":{
+							attrs:{
+								fill:"#493D31"
+							},
+							attrsHover:{
+								fill:"#493D31",
+							},
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Arse (Cartaginensis)</span><br/><img src=\"img/oliveoil.png\"> <span style=\"font-weight:bold;\">Olive oil</span><br/>1/2/4/8 food <br/>100/150/200/300 farming wealth<br>5%/10%/15%/20% agriculture wealth(global)<br>1/2/3/4 growth<br>0/1/2/3 public order"},
 	                    },
 	                    "neapolis-resource-oliveoil":{
+							attrs:{
+								fill:"#493D31"
+							},
+							attrsHover:{
+								fill:"#493D31",
+							},
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Neapolis (Italia)</span><br/><img src=\"img/oliveoil.png\"> <span style=\"font-weight:bold;\">Olive oil</span><br/>1/2/4/8 food <br/>100/150/200/300 farming wealth<br>5%/10%/15%/20% agriculture wealth(global)<br>1/2/3/4 growth<br>0/1/2/3 public order"},
 	                    },
 	                    "jerusalem-resource-oliveoil":{
+							attrs:{
+								fill:"#493D31"
+							},
+							attrsHover:{
+								fill:"#493D31",
+							},
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Jerusalem (Nabataea)</span><br/><img src=\"img/oliveoil.png\"> <span style=\"font-weight:bold;\">Olive oil</span><br/>1/2/4/8 food <br/>100/150/200/300 farming wealth<br>5%/10%/15%/20% agriculture wealth(global)<br>1/2/3/4 growth<br>0/1/2/3 public order"},
 	                    },
 	                    "belz-resource-lead":{
+							attrs:{
+								fill:"#493D31"
+							},
+							attrsHover:{
+								fill:"#493D31",
+							},
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Belz (Silesia)</span><br/><img src=\"img/lead.png\"> <span style=\"font-weight:bold;\">Lead</span><br/>0/-1/-4/-8 food <br/>100/150/200/300 mining wealth<br>1/2/3/4 growth<br>1/2/3/4 public order(global)<br>0/0/0/5% industry wealth"},
 	                    },
 	                    "navissos-resource-lead":{
+							attrs:{
+								fill:"#493D31"
+							},
+							attrsHover:{
+								fill:"#493D31",
+							},
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Navissos (Thracia)</span><br/><img src=\"img/lead.png\"> <span style=\"font-weight:bold;\">Lead</span><br/>0/-1/-4/-8 food <br/>100/150/200/300 mining wealth<br>1/2/3/4 growth<br>1/2/3/4 public order(global)<br>0/0/0/5% industry wealth"},
 	                    },
 	                    "merv-resource-lead":{
+							attrs:{
+								fill:"#493D31"
+							},
+							attrsHover:{
+								fill:"#493D31",
+							},
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Merv (Aria)</span><br/><img src=\"img/lead.png\"> <span style=\"font-weight:bold;\">Lead</span><br/>0/-1/-4/-8 food <br/>100/150/200/300 mining wealth<br>1/2/3/4 growth<br>1/2/3/4 public order(global)<br>0/0/0/5% industry wealth"},
 	                    },
 	                    "maasgat-resource-lead":{
+							attrs:{
+								fill:"#493D31"
+							},
+							attrsHover:{
+								fill:"#493D31",
+							},
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Maas-gat (Arabia Felix)</span><br/><img src=\"img/lead.png\"> <span style=\"font-weight:bold;\">Lead</span><br/>0/-1/-4/-8 food <br/>100/150/200/300 mining wealth<br>1/2/3/4 growth<br>1/2/3/4 public order(global)<br>0/0/0/5% industry wealth"},
 	                    },
 	                    "migdol-resource-dyes":{
+                            attrs:{
+                                fill:"#7256AB"
+                            },
+                            attrsHover:{
+                                fill:"#7256AB"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Migdol (Mauretania)</span><br/><img src=\"img/dyes.png\"> <span style=\"font-weight:bold;\">Dyes</span><br/>0/-1/-4/-8 food <br/>200/350/500/650 local commerce<br>10%/20%/30%/40% manufacturing wealth<br>1/2/3/4 growth<br>1/2/4/6 public order(global)"},
 	                    },
 	                    "tyros-resource-dyes":{
+                            attrs:{
+                                fill:"#7256AB"
+                            },
+                            attrsHover:{
+                                fill:"#7256AB"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Tyros (Syria)</span><br/><img src=\"img/dyes.png\"> <span style=\"font-weight:bold;\">Dyes</span><br/>0/-1/-4/-8 food <br/>200/350/500/650 local commerce<br>10%/20%/30%/40% manufacturing wealth<br>1/2/3/4 growth<br>1/2/4/6 public order(global)"},
 	                    },
 	                    "alabu-resource-amber":{
+                            attrs:{
+                                fill:"#7256AB"
+                            },
+                            attrsHover:{
+                                fill:"#7256AB"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Alabu (Suebia)</span><br/><img src=\"img/amber.png\"> <span style=\"font-weight:bold;\">Amber</span><br/>0/-1/-4/-8 food <br/>150/250/350/500 local commerce<br>2%/4%/6%/8% tariff income<br>1/2/3/4 growth<br>1/2/3/4 public order"},
 	                    },
 	                    "ascaucalis-resource-amber":{
+                            attrs:{
+                                fill:"#7256AB"
+                            },
+                            attrsHover:{
+                                fill:"#7256AB"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Ascaucalis (Suebia)</span><br/><img src=\"img/amber.png\"> <span style=\"font-weight:bold;\">Amber</span><br/>0/-1/-4/-8 food <br/>150/250/350/500 local commerce<br>2%/4%/6%/8% tariff income<br>1/2/3/4 growth<br>1/2/3/4 public order"},
 	                    },
 	                    "monsregius-resource-amber":{
+                            attrs:{
+                                fill:"#7256AB"
+                            },
+                            attrsHover:{
+                                fill:"#7256AB"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Mons Regius (Sarmatia)</span><br/><img src=\"img/amber.png\"> <span style=\"font-weight:bold;\">Amber</span><br/>0/-1/-4/-8 food <br/>150/250/350/500 local commerce<br>2%/4%/6%/8% tariff income<br>1/2/3/4 growth<br>1/2/3/4 public order"},
 	                    },
 	                    "patavium-resource-glassware":{
+                            attrs:{
+                                fill:"#7256AB"
+                            },
+                            attrsHover:{
+                                fill:"#7256AB"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Patavium (Cisalpina)</span><br/><img src=\"img/glassware.png\"> <span style=\"font-weight:bold;\">Glassware</span><br/>0/-1/-4/-8 food <br/>100/150/200/300 manufacturing wealth<br>4%/8%/12%/16% research rate<br>1/2/3/4 growth<br>0/1/2/3 public order"},
 	                    },
 	                    "salamis-resource-glassware":{
+                            attrs:{
+                                fill:"#7256AB"
+                            },
+                            attrsHover:{
+                                fill:"#7256AB"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Salamis (Cilicia)</span><br/><img src=\"img/glassware.png\"> <span style=\"font-weight:bold;\">Glassware</span><br/>0/-1/-4/-8 food <br/>100/150/200/300 manufacturing wealth<br>4%/8%/12%/16% research rate<br>1/2/3/4 growth<br>0/1/2/3 public order"},
 	                    },
 	                    "bagacum-resource-glassware":{
+                            attrs:{
+                                fill:"#7256AB"
+                            },
+                            attrsHover:{
+                                fill:"#7256AB"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Bagacum (Germania Minor)</span><br/><img src=\"img/glassware.png\"> <span style=\"font-weight:bold;\">Glassware</span><br/>0/-1/-4/-8 food <br/>100/150/200/300 manufacturing wealth<br>4%/8%/12%/16% research rate<br>1/2/3/4 growth<br>0/1/2/3 public order"},
 	                    },
 	                    "palmyra-resource-glassware":{
+                            attrs:{
+                                fill:"#7256AB"
+                            },
+                            attrsHover:{
+                                fill:"#7256AB"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Palmyra (Syria)</span><br/><img src=\"img/glassware.png\"> <span style=\"font-weight:bold;\">Glassware</span><br/>0/-1/-4/-8 food <br/>100/150/200/300 manufacturing wealth<br>4%/8%/12%/16% research rate<br>1/2/3/4 growth<br>0/1/2/3 public order"},
 	                    },
 	                    "susa-resource-glassware":{
+                            attrs:{
+                                fill:"#7256AB"
+                            },
+                            attrsHover:{
+                                fill:"#7256AB"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Susa (Persis)</span><br/><img src=\"img/glassware.png\"> <span style=\"font-weight:bold;\">Glassware</span><br/>0/-1/-4/-8 food <br/>100/150/200/300 manufacturing wealth<br>4%/8%/12%/16% research rate<br>1/2/3/4 growth<br>0/1/2/3 public order"},
 	                    },
 	                    "gadira-resource-wine":{
+                            attrs:{
+                                fill:"#7256AB"
+                            },
+                            attrsHover:{
+                                fill:"#7256AB"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Gadira (Baetica)</span><br/><img src=\"img/wine.png\"> <span style=\"font-weight:bold;\">Wine</span><br/>0/-1/-4/-8 food <br/>150/200/250/250 local commerce<br>5%/10%/15%/20% commerce wealth<br>1/2/3/4 growth<br>1/2/3/4 public order(global)"},
 	                    },
 	                    "velathri-resource-wine":{
+                            attrs:{
+                                fill:"#7256AB"
+                            },
+                            attrsHover:{
+                                fill:"#7256AB"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Velathri (Italia)</span><br/><img src=\"img/wine.png\"> <span style=\"font-weight:bold;\">Wine</span><br/>0/-1/-4/-8 food <br/>150/200/250/250 local commerce<br>5%/10%/15%/20% commerce wealth<br>1/2/3/4 growth<br>1/2/3/4 public order(global)"},
 	                    },
 	                    "apollonia-resource-wine":{
+                            attrs:{
+                                fill:"#7256AB"
+                            },
+                            attrsHover:{
+                                fill:"#7256AB"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Apollonia (Macedonia)</span><br/><img src=\"img/wine.png\"> <span style=\"font-weight:bold;\">Wine</span><br/>0/-1/-4/-8 food <br/>150/200/250/250 local commerce<br>5%/10%/15%/20% commerce wealth<br>1/2/3/4 growth<br>1/2/3/4 public order(global)"},
 	                    },
 	                    "samosata-resource-wine":{
+                            attrs:{
+                                fill:"#7256AB"
+                            },
+                            attrsHover:{
+                                fill:"#7256AB"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Samosata (Galatia et Cappadocia)</span><br/><img src=\"img/wine.png\"> <span style=\"font-weight:bold;\">Wine</span><br/>0/-1/-4/-8 food <br/>150/200/250/250 local commerce<br>5%/10%/15%/20% commerce wealth<br>1/2/3/4 growth<br>1/2/3/4 public order(global)"},
 	                    },
 	                    "phanagoria-resource-wine":{
+                            attrs:{
+                                fill:"#7256AB"
+                            },
+                            attrsHover:{
+                                fill:"#7256AB"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Phanagoria (Bosporus)</span><br/><img src=\"img/wine.png\"> <span style=\"font-weight:bold;\">Wine</span><br/>0/-1/-4/-8 food <br/>150/200/250/250 local commerce<br>5%/10%/15%/20% commerce wealth<br>1/2/3/4 growth<br>1/2/3/4 public order(global)"},
 	                    },
 	                    "brigantium-resource-horses":{
+                            attrs:{
+                                fill:"#A42306"
+                            },
+                            attrsHover:{
+                                fill:"#A42306"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Brigantium (Tarraconensis)</span><br/><img src=\"img/horses.png\"> <span style=\"font-weight:bold;\">Horses</span><br/>0/-2/-6 food <br/>100/200/300 livestock wealth<br>1/2/3 growth<br>5%/10%/20% bonus cavalry speed"},
 	                    },
 	                    "treverorum-resource-horses":{
+                            attrs:{
+                                fill:"#A42306"
+                            },
+                            attrsHover:{
+                                fill:"#A42306"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Treverorum (Belgica)</span><br/><img src=\"img/horses.png\"> <span style=\"font-weight:bold;\">Horses</span><br/>0/-2/-6 food <br/>100/200/300 livestock wealth<br>1/2/3 growth<br>5%/10%/20% bonus cavalry speed"},
 	                    },
 	                    "larissa-resource-horses":{
+                            attrs:{
+                                fill:"#A42306"
+                            },
+                            attrsHover:{
+                                fill:"#A42306"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Larissa (Macedonia)</span><br/><img src=\"img/horses.png\"> <span style=\"font-weight:bold;\">Horses</span><br/>0/-2/-6 food <br/>100/200/300 livestock wealth<br>1/2/3 growth<br>5%/10%/20% bonus cavalry speed"},
 	                    },
 	                    "zadrakarta-resource-horses":{
+                            attrs:{
+                                fill:"#A42306"
+                            },
+                            attrsHover:{
+                                fill:"#A42306"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Zadrakarta (Parthia)</span><br/><img src=\"img/horses.png\"> <span style=\"font-weight:bold;\">Horses</span><br/>0/-2/-6 food <br/>100/200/300 livestock wealth<br>1/2/3 growth<br>5%/10%/20% bonus cavalry speed"},
 	                    },
 	                    "dimmidi-resource-horses":{
+                            attrs:{
+                                fill:"#A42306"
+                            },
+                            attrsHover:{
+                                fill:"#A42306"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Dimmidi (Mauretania)</span><br/><img src=\"img/horses.png\"> <span style=\"font-weight:bold;\">Horses</span><br/>0/-2/-6 food <br/>100/200/300 livestock wealth<br>1/2/3 growth<br>5%/10%/20% bonus cavalry speed"},
 	                    },
 	                    "siracena-resource-horses":{
+                            attrs:{
+                                fill:"#A42306"
+                            },
+                            attrsHover:{
+                                fill:"#A42306"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Siracena (Ponto-Caspia)</span><br/><img src=\"img/horses.png\"> <span style=\"font-weight:bold;\">Horses</span><br/>0/-2/-6 food <br/>100/200/300 livestock wealth<br>1/2/3 growth<br>5%/10%/20% bonus cavalry speed"},
 	                    },
 	                    "olisipo-resource-iron":{
+                            attrs:{
+                                fill:"#A42306"
+                            },
+                            attrsHover:{
+                                fill:"#A42306"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Olisipo (Lusitania)</span><br/><img src=\"img/iron.png\"> <span style=\"font-weight:bold;\">Iron</span><br/>0/-2/-6 food <br/>100/200/300 manufacturing wealth<br>1/2/3 growth<br>5%/10%/20% weapon damage or shields+armour"},
 	                    },
 	                    "lemonum-resource-iron":{
+                            attrs:{
+                                fill:"#A42306"
+                            },
+                            attrsHover:{
+                                fill:"#A42306"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Lemonum (Aquitania)</span><br/><img src=\"img/iron.png\"> <span style=\"font-weight:bold;\">Iron</span><br/>0/-2/-6 food <br/>100/200/300 manufacturing wealth<br>1/2/3 growth<br>5%/10%/20% weapon damage or shields+armour"},
 	                    },
 	                    "koria-resource-iron":{
+                            attrs:{
+                                fill:"#A42306"
+                            },
+                            attrsHover:{
+                                fill:"#A42306"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Koria (Raetia et Noricum)</span><br/><img src=\"img/iron.png\"> <span style=\"font-weight:bold;\">Iron</span><br/>0/-2/-6 food <br/>100/200/300 manufacturing wealth<br>1/2/3 growth<br>5%/10%/20% weapon damage or shields+armour"},
 	                    },
 	                    "segestica-resource-iron":{
+                            attrs:{
+                                fill:"#A42306"
+                            },
+                            attrsHover:{
+                                fill:"#A42306"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Segestica (Pannonia)</span><br/><img src=\"img/iron.png\"> <span style=\"font-weight:bold;\">Iron</span><br/>0/-2/-6 food <br/>100/200/300 manufacturing wealth<br>1/2/3 growth<br>5%/10%/20% weapon damage or shields+armour"},
 	                    },
 	                    "diospolis-resource-iron":{
+                            attrs:{
+                                fill:"#A42306"
+                            },
+                            attrsHover:{
+                                fill:"#A42306"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Diospolis (Aegyptus)</span><br/><img src=\"img/iron.png\"> <span style=\"font-weight:bold;\">Iron</span><br/>0/-2/-6 food <br/>100/200/300 manufacturing wealth<br>1/2/3 growth<br>5%/10%/20% weapon damage or shields+armour"},
 	                    },
 	                    "mazaca-resource-iron":{
+                            attrs:{
+                                fill:"#A42306"
+                            },
+                            attrsHover:{
+                                fill:"#A42306"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Mazaca (Galatia et Cappadocia)</span><br/><img src=\"img/iron.png\"> <span style=\"font-weight:bold;\">Iron</span><br/>0/-2/-6 food <br/>100/200/300 manufacturing wealth<br>1/2/3 growth<br>5%/10%/20% weapon damage or shields+armour"},
 	                    },
 	                    "tushpa-resource-iron":{
+                            attrs:{
+                                fill:"#A42306"
+                            },
+                            attrsHover:{
+                                fill:"#A42306"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Tushpa (Armenia)</span><br/><img src=\"img/iron.png\"> <span style=\"font-weight:bold;\">Iron</span><br/>0/-2/-6 food <br/>100/200/300 manufacturing wealth<br>1/2/3 growth<br>5%/10%/20% weapon damage or shields+armour"},
 	                    },
 	                    "rhaga-resource-iron":{
+                            attrs:{
+                                fill:"#A42306"
+                            },
+                            attrsHover:{
+                                fill:"#A42306"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Rhaga (Media Magna)</span><br/><img src=\"img/iron.png\"> <span style=\"font-weight:bold;\">Iron</span><br/>0/-2/-6 food <br/>100/200/300 manufacturing wealth<br>1/2/3 growth<br>5%/10%/20% weapon damage or shields+armour"},
 	                    },
 	                    "lepcis-resource-grain":{
+                            attrs:{
+                                fill:"#3E7529"
+                            },
+                            attrsHover:{
+                                fill:"#3E7529"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Lepcis (Africa)</span><br/><img src=\"img/grain.png\"> <span style=\"font-weight:bold;\">Grain</span><br/>1/2/3/4 food per region <br/>40/60/80/100 farming wealth<br>10%/20%/40%/80% farming wealth<br>1/2/3/4 growth"},
 	                    },
 	                    "syracusae-resource-grain":{
+                            attrs:{
+                                fill:"#3E7529"
+                            },
+                            attrsHover:{
+                                fill:"#3E7529"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Syracusae (Magna Graecia)</span><br/><img src=\"img/grain.png\"> <span style=\"font-weight:bold;\">Grain</span><br/>1/2/3/4 food per region <br/>40/60/80/100 farming wealth<br>10%/20%/40%/80% farming wealth<br>1/2/3/4 growth"},
 	                    },
 	                    "akink-resource-grain":{
+                            attrs:{
+                                fill:"#3E7529"
+                            },
+                            attrsHover:{
+                                fill:"#3E7529"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Akink (Pannonia)</span><br/><img src=\"img/grain.png\"> <span style=\"font-weight:bold;\">Grain</span><br/>1/2/3/4 food per region <br/>40/60/80/100 farming wealth<br>10%/20%/40%/80% farming wealth<br>1/2/3/4 growth"},
 	                    },
 	                    "malva-resource-grain":{
+                            attrs:{
+                                fill:"#3E7529"
+                            },
+                            attrsHover:{
+                                fill:"#3E7529"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Malva (Dacia)</span><br/><img src=\"img/grain.png\"> <span style=\"font-weight:bold;\">Grain</span><br/>1/2/3/4 food per region <br/>40/60/80/100 farming wealth<br>10%/20%/40%/80% farming wealth<br>1/2/3/4 growth"},
 	                    },
 	                    "memphis-resource-grain":{
+                            attrs:{
+                                fill:"#3E7529"
+                            },
+                            attrsHover:{
+                                fill:"#3E7529"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Memphis (Aegyptus)</span><br/><img src=\"img/grain.png\"> <span style=\"font-weight:bold;\">Grain</span><br/>1/2/3/4 food per region <br/>40/60/80/100 farming wealth<br>10%/20%/40%/80% farming wealth<br>1/2/3/4 growth"},
 	                    },
 	                    "myoshormos-resource-grain":{
+                            attrs:{
+                                fill:"#3E7529"
+                            },
+                            attrsHover:{
+                                fill:"#3E7529"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Myos Hormos (Aegyptus)</span><br/><img src=\"img/grain.png\"> <span style=\"font-weight:bold;\">Grain</span><br/>1/2/3/4 food per region <br/>40/60/80/100 farming wealth<br>10%/20%/40%/80% farming wealth<br>1/2/3/4 growth"},
 	                    },
 	                    "charax-resource-grain":{
+                            attrs:{
+                                fill:"#3E7529"
+                            },
+                            attrsHover:{
+                                fill:"#3E7529"
+                            },
 	                    	value: "Resources",
 	                    	href: "#",
 	                    	tooltip: {content: "<span style=\"font-weight:bold;\">Charax (Mesopotamia)</span><br/><img src=\"img/grain.png\"> <span style=\"font-weight:bold;\">Grain</span><br/>1/2/3/4 food per region <br/>40/60/80/100 farming wealth<br>10%/20%/40%/80% farming wealth<br>1/2/3/4 growth"},
@@ -605,6 +1016,7 @@
 		        <div class="plotLegend">
 		        	<span>Alternative content for the legend</span>
         		</div>
+        		<div class="redResources"></div>
 
 			</div>
 		</div>
