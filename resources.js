@@ -26,7 +26,7 @@
         {
             maps :  {
                 resources : {
-                    width : 1574,
+                    width : 1074,
                     height : 880,
                     getCoords : function (lat, lon) {
                         // todo
