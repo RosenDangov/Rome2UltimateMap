@@ -3,22 +3,22 @@
 
 function town_info(town_name,province_name,type){
     if(type == "gold"){
-        return "<span style=\"font-weight:bold;\">"+town_name+" ("+province_name+")</span><br/><img src=\"img/gold.png\"> <span style=\"font-weight:bold;\">Gold</span><br/>0/-1/-4/-8 food <br/>200/350/500/700 mining wealth<br>+5%/10%/15%/20% mining wealth(global)<br>1/2/3/4 growth<br>0/0/0/5% commerce wealth(global)"
+        return "<span style=\"font-weight:bold;\">"+town_name+" ("+province_name+")</span><br/><img src=\"img/gold.png\"> <span style=\"font-weight:bold;\">Gold</span><br/>0/-1/-4/-8 food <br/>200/350/500/700 mining wealth<br>+5%/10%/15%/20% mining wealth(global)<br>+0/0/0/5% all commerce wealth(province)<br>1/2/3/4 growth"
     }
     if(type == "marble"){
-        return "<span style=\"font-weight:bold;\">"+town_name+" ("+province_name+")</span><br/><img src=\"img/marble.png\"> <span style=\"font-weight:bold;\">Marble</span><br/>0/-1/-4/-8 food <br/>100/150/200/300 mining wealth<br>5%/10%/15%/20% cheaper construction<br>1/2/3/4 public order(global)<br>1/2/3/4 growth"
+        return "<span style=\"font-weight:bold;\">"+town_name+" ("+province_name+")</span><br/><img src=\"img/marble.png\"> <span style=\"font-weight:bold;\">Marble</span><br/>0/-1/-4/-8 food <br/>100/150/200/300 mining wealth<br>5%/10%/15%/20% cheaper construction (province)<br>1/2/3/4 public order(global)<br>1/2/3/4 growth"
     }
     if(type == "silk"){
-        return "<span style=\"font-weight:bold;\">"+town_name+" ("+province_name+")</span><br/><img src=\"img/silk.png\"> <span style=\"font-weight:bold;\">Silk</span><br/>0/-1/-4/-8 food <br/>100/150/200/250 local commerce<br>5%/10%/15%/20% commerce wealth(global)<br>0/1/2/3 public order<br>1/2/3/3 growth"
+        return "<span style=\"font-weight:bold;\">"+town_name+" ("+province_name+")</span><br/><img src=\"img/silk.png\"> <span style=\"font-weight:bold;\">Silk</span><br/>0/-1/-4/-8 food <br/>100/150/200/250 local commerce<br>+5%/10%/15%/20% all commerce wealth(global)<br>0/1/2/3 public order<br>1/2/3/3 growth"
     }
     if(type == "leather"){
-        return "<span style=\"font-weight:bold;\">"+town_name+" ("+province_name+")</span><br/><img src=\"img/leather.png\"> <span style=\"font-weight:bold;\">Leather</span><br/>0/-1/-4/-8 food <br/>100/150/200/250 local commerce<br>5%/10%/15%/20% manufacturing wealth(global)<br>1/2/3/4 growth"
+        return "<span style=\"font-weight:bold;\">"+town_name+" ("+province_name+")</span><br/><img src=\"img/leather.png\"> <span style=\"font-weight:bold;\">Leather</span><br/>0/-1/-4/-8 food <br/>100/150/200/250 manufacturing wealth<br>+5%/10%/15%/20% manufacturing wealth(global)<br>1/2/3/4 growth"
     }
     if(type == "timber"){
-        return "<span style=\"font-weight:bold;\">"+town_name+" ("+province_name+")</span><br/><img src=\"img/timber.png\"> <span style=\"font-weight:bold;\">Timber</span><br/>0/-1/-4/-8 food <br/>40/60/80/100 manufacturing wealth<br>5%/10%/15%/20% industry wealth<br>1/2/3/4 growth<br>0/1/2/3 public order<br>0/1/2/3 level hulls"
+        return "<span style=\"font-weight:bold;\">"+town_name+" ("+province_name+")</span><br/><img src=\"img/timber.png\"> <span style=\"font-weight:bold;\">Timber</span><br/>0/-1/-4/-8 food <br/>40/60/80/100 manufacturing wealth<br>+5%/10%/15%/20% industry wealth (province)<br>0/1/2/3 public order<br>1/2/3/4 growth<br>+0/5/10/20% ships health"
     }
     if(type == "oliveoil"){
-        return "<span style=\"font-weight:bold;\">"+town_name+" ("+province_name+")</span><br/><img src=\"img/oliveoil.png\"> <span style=\"font-weight:bold;\">Olive oil</span><br/>1/2/4/8 food <br/>100/150/200/300 farming wealth<br>5%/10%/15%/20% agriculture wealth(global)<br>1/2/3/4 growth<br>0/1/2/3 public order"
+        return "<span style=\"font-weight:bold;\">"+town_name+" ("+province_name+")</span><br/><img src=\"img/oliveoil.png\"> <span style=\"font-weight:bold;\">Olive oil</span><br/>1/2/4/8 food <br/>100/150/200/300 farming wealth<br>+5%/10%/15%/20% agriculture wealth(global)<br>0/1/2/3 public order<br>1/2/3/4 growth"
     }
     if(type == "lead"){
         return "<span style=\"font-weight:bold;\">"+town_name+" ("+province_name+")</span><br/><img src=\"img/lead.png\"> <span style=\"font-weight:bold;\">Lead</span><br/>0/-1/-4/-8 food <br/>100/150/200/300 mining wealth<br>+0/0/0/5% industry wealth (province<br>1/2/3/4 public order(global)<br>1/2/3/4 growth"
@@ -30,7 +30,7 @@ function town_info(town_name,province_name,type){
         return "<span style=\"font-weight:bold;\">"+town_name+" ("+province_name+")</span><br/><img src=\"img/amber.png\"> <span style=\"font-weight:bold;\">Amber</span><br/>0/-1/-4/-8 food <br/>150/250/350/500 local commerce<br>2%/4%/6%/8% tariff income<br>1/2/3/4 public order<br>1/2/3/4 growth"
     }
     if(type == "glassware"){
-        return "<span style=\"font-weight:bold;\">"+town_name+" ("+province_name+")</span><br/><img src=\"img/glassware.png\"> <span style=\"font-weight:bold;\">Glassware</span><br/>0/-1/-4/-8 food <br/>100/150/200/300 manufacturing wealth<br>4%/8%/12%/16% research rate<br>0/1/2/3 public order<br>1/2/3/4 growth"
+        return "<span style=\"font-weight:bold;\">"+town_name+" ("+province_name+")</span><br/><img src=\"img/glassware.png\"> <span style=\"font-weight:bold;\">Glassware</span><br/>0/-1/-4/-8 food <br/>100/150/200/300 manufacturing wealth<br>+4%/8%/12%/16% research rate<br>0/1/2/3 public order<br>1/2/3/4 growth"
     }
     if(type == "wine"){
         return "<span style=\"font-weight:bold;\">"+town_name+" ("+province_name+")</span><br/><img src=\"img/wine.png\"> <span style=\"font-weight:bold;\">Wine</span><br/>0/-1/-4/-8 food <br/>150/200/250/250 commerce wealth<br>+5%/10%/15%/20% commerce wealth (province)<br>1/2/3/4 public order(global)<br>1/2/3/4 growth"
