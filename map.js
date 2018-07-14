@@ -17,9 +17,12 @@ Raphael.el.tooltip = function (tp) {
 
         this.mousemove(function(event) { 
           	this.tp.animate({
-          		opacity: 1,
+          		opacity: 0,
           	},150);
             this.tp.translate(event.clientX - this.tp.ox,event.clientY - this.tp.oy);
+            console.log(event.clientX)
+            console.log(this.tp.ox)
+            
             this.tp.ox = event.clientX;
             this.tp.oy = event.clientY;
         });
